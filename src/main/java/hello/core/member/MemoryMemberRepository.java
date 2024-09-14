@@ -6,7 +6,7 @@ import java.util.Map;
 public class MemoryMemberRepository implements MemberRepository {
 
     // 저장소를 만든다. 근데 왜 Map으로 사용했을까?
-    //
+    // 동시성 이슈: ConcurrentRequest.
     private static Map<Long, Member> store = new HashMap<>();
 
     @Override
